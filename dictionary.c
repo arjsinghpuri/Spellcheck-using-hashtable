@@ -18,7 +18,6 @@ typedef struct node
 }
 node;
 
-// TODO: Choose number of buckets in hash table
 const unsigned int N = 26;
 
 // Hash table
@@ -27,7 +26,6 @@ node *table[N];
 // Returns true if word is in dictionary, else false
 bool check(const char *word)
 {
-    // TODO
     int index = hash(word);
     if (table[index] == NULL)
     {
@@ -115,7 +113,6 @@ bool load(const char *dictionary)
 // Returns number of words in dictionary if loaded, else 0 if not yet loaded
 unsigned int size(void)
 {
-    // TODO
     return count;
 }
 
@@ -135,7 +132,6 @@ void free_ll(node *n)
 // Unloads dictionary from memory, returning true if successful, else false
 bool unload(void)
 {
-    // TODO
     for (int i = 0; i < N; i++)
     {
         free_ll(table[i]);
